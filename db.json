@@ -1,16 +1,10 @@
 {
   "plants": [
     {
-      "id": 1,
-      "name": "Aloe",
-      "image": "./images/aloe.jpg",
-      "price": 15.99
-    },
-    {
       "id": 2,
       "name": "ZZ Plant",
       "image": "./images/zz-plant.jpg",
-      "price": 25.98
+      "price": 26
     },
     {
       "id": 3,
@@ -31,46 +25,22 @@
       "price": 10.37
     },
     {
-      "id": 6,
-      "name": "Monstera Deliciosa",
-      "image": "./images/monstera.jpg",
-      "price": 25.99
-    },
-    {
       "id": 7,
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
     },
     {
-      "name": "chorizo",
-      "image": "\"./assets/ramen/nirvana.jpg\"",
-      "price": "20",
-      "id": 8
-    },
-    {
-      "name": "chikorita",
-      "image": "https://i.pinimg.com/originals/c1/f6/d0/c1f6d0c6af72b8d54213d1df292d51ab.jpg",
-      "price": "20",
-      "id": 9
-    },
-    {
-      "name": "chikorita",
-      "image": "https://i.pinimg.com/originals/c1/f6/d0/c1f6d0c6af72b8d54213d1df292d51ab.jpg",
-      "price": "20",
+      "name": "Sunflower",
+      "image": "https://gardenerspath.com/wp-content/uploads/2020/05/Sunflower-Growing-in-Sunshine.jpg",
+      "price": "30",
       "id": 10
     },
     {
-      "name": "",
-      "image": "",
-      "price": 0,
+      "name": "Tulip",
+      "image": "https://www.photos-public-domain.com/wp-content/uploads/2012/04/orange-striped-or-variegated-tulip.jpg",
+      "price": "40",
       "id": 11
-    },
-    {
-      "name": "",
-      "image": "",
-      "price": 0,
-      "id": 12
     }
   ]
 }

@@ -33,11 +33,41 @@ const filterPlants = plants.filter((plant) => {
     setPlants([...plants, newPlant])
   };
 
+  function handlePrice(id, newPrice){
+    fetch(`http://localhost:6001/plants/${id}`,{
+      method:"PATCH",
+      headers:{
+        "Content-Type":"application/json",
+      },
+      body:JSON.stringify({price:parseFloat(newPrice)})
+    })
+    .then((r) => r.json())
+    .then((updatedPlantPrice) => {
+      const updatedPlant = plants.map((plant) => plant.id === updatedPlantPrice.id ? updatedPlantPrice : plant)
+      setPlants(updatedPlant)
+    })
+  };
+
+  function handleDelete(id){
+    fetch(`http://localhost:6001/plants/${id}`,{
+      method:"DELETE"
+    })
+    .then(() => {
+      const deletePlant = plants.filter((plant) => plant.id !== id);
+      setPlants(deletePlant)
+    });
+  };
+
   return (
     <main>
       <NewPlantForm onAddPlant={handleAddPlant} />
       <Search onSearch={handleSearch}/>
-      <PlantList plants={filterPlants} onClickSold={handleSold} isSoldOut={isSoldOut}/>
+      <PlantList 
+      plants={filterPlants} 
+      onClickSold={handleSold} 
+      isSoldOut={isSoldOut} 
+      onPriceUpdate={handlePrice}
+      onDelete={handleDelete}/>
     </main>
   );
 }
